@@ -59,10 +59,7 @@ const MealLogs = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        `http://localhost:3000/v1/api/meallogs/histories?page=${pageNumber}&token=${token}`
-        // `https://aaloo-dev-api.scaleupdevops.in/v1/api/meallogs/histories?page=${pageNumber}&token=${token}`
-      );
+      const response = await fetch(`${process.env.mealLogs}`);
       const data = await response.json();
       if (data.data.mealLogs.length > 0) {
         setMealLogs((prev) => ({ ...prev, [pageNumber]: data.data.mealLogs }));
