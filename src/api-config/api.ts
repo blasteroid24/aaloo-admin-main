@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
 
 // initialize axios
 export const api = axios.create({
-  baseURL: process.env.baseURL,
+  baseURL: process.env.NEXT_PUBLIC_baseURL,
    
   headers: {
     common: {

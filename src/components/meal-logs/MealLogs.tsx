@@ -59,7 +59,7 @@ const MealLogs = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.mealLogs}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_mealLogs}`);
       const data = await response.json();
       if (data.data.mealLogs.length > 0) {
         setMealLogs((prev) => ({ ...prev, [pageNumber]: data.data.mealLogs }));

@@ -24,7 +24,7 @@ function* userLoginHandler(action: UserActionTypes) {
                 name: data?.data?.user?.username,
             }
             if (data?.data?.user?.isEmailVerified) {
-                yield router.push('/survey-management')
+                yield router.push('/chef-management/survey-management')
             }
             yield put(setUserProfile(userPorfile))
             toast.success(data?.message);

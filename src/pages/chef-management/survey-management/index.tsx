@@ -18,7 +18,6 @@ import { IGetSurvey, ISurvey } from '@/types/surveyInterface'
 import { FaCalendarDays, FaDownload, FaPlus } from 'react-icons/fa6'
 import SurveyManagementTable from '@/components/tables/SurveyManagementTable'
 import moment from 'moment'
-import * as XLSX from 'xlsx';
 
 type Props = {}
 
