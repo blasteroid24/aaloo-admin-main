@@ -59,7 +59,7 @@ const MealLogs = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_mealLogs}?page=${pageNumber}&token=${token}`);
+      const response = await fetch(`https://aaloobackend.codepipe.xyz/v1/api/meallogs/histories?page=${pageNumber}&token=${token}`);
       const data = await response.json();
       if (data.data.mealLogs.length > 0) {
         setMealLogs((prev) => ({ ...prev, [pageNumber]: data.data.mealLogs }));
